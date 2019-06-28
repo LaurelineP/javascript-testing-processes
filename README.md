@@ -8,14 +8,17 @@ Context:
     - if it passes everything is fine
     - else, it's a failure which imply to correct your code
 
-The idea behing testing your javascript or your code is to **automate and simplify** your tests in order not doing it manually:
-Example: You'd like to test your code at each changement, stages for instance.
+The idea behing testing your javascript or your code is to  
+**automate and simplify** your tests in order not doing it manually:
+Example: You'd like to test your code at each changement,  
+stages for instance.  
 
 ## Why testing your code ?
 - To get feedbacks if you break your code or not
 - To save time by avoiding to test manually evrything over and over again
 - To anticipate possible issues & bugs
-- To integrate into build workflow: example when you push a commit and this could be an automatic workflow to set in order to test your code each time you commit 
+- To integrate into build workflow: example when you push a commit and this  
+could be an automatic workflow to set in order to test your code each time you commit 
 - To isolate, a maximum, bits of code by breaking up complex dependencies ( dependencies within a function )
 - To improve your code, because you'll probably follow certains pattern to write your code.
 
@@ -43,8 +46,21 @@ Example: You'd like to test your code at each changement, stages for instance.
 - Tools: Puppeteer
 
 ## Unit testing
-Unit testing are good to check functions with no dependencies ( meaning a mere function doing one thing )  
-ex: with arguments should return a txt with those arguments ( cf. "generateText")
+Unit testing are good to check functions with no dependencies  
+( meaning a mere function doing one thing )  
+ex: with arguments should return a txt with those arguments  
+( cf. "generateText")
 
 ## Integration testing
-Integration testing are good to check functions implementing other functions ex: a function using other smaller function, which also have there unit tests :-> which leads us to have a bigger & safer-like function ( due to the use of other functions already tested ) ( cf. "addUser" using our previous "generateText" function in order to check the validation --> "checkAndGenerate" function ).
+Integration testing are good to check functions implementing  
+other functions ex: a function using other smaller function,  
+which also have there unit tests :-> which leads us to have a  
+bigger & safer-like function ( due to the use of other  
+functions already tested ) ( cf. "addUser" using our previous  
+"generateText" function in order to check the validation -->  
+"checkAndGenerate" function ).
+
+## End To End ( E2E ) testing
+End to end testing is to test your interface's flow,  
+here we are going through our inputs, clicking and typing text
+in order to outcome with a card displaying the name and age.

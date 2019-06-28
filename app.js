@@ -12,13 +12,14 @@ const addUser = () => {
   const newUserNameInput = document.querySelector('input#name');
   const newUserAgeInput = document.querySelector('input#age');
 
-  if( !outputText ){
-    return;
-  }
   const outputText = checkAndGenerate(
     newUserNameInput.value,
     newUserAgeInput.value
   );
+
+  if( !outputText ){
+    return;
+  }
 
   const userList = document.querySelector('.user-list');
   const element = createElement('li', outputText, 'user-item');
