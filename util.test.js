@@ -1,6 +1,6 @@
-const { generateText } = require('./util');
+const { generateText, checkAndGenerate } = require('./util');
 
-/** Unit test */
+/** Unit tests */
 // 1. Tests regular behavior cases ( double check )
 test('should output name and age', () => {
     const text = generateText('Laureline', 26);
@@ -20,4 +20,17 @@ test('should output data-less text', () => {
 test('should output undefined-value text', () => {
     const text = generateText();
     expect( text ).toBe('undefined (undefined years old)');
+})
+
+
+
+
+/** Integration tests */
+/* NB: even though it looks like our first unit test
+ this is however a different one as checkAndGenerate
+ is a dependency to "addUser" */
+test('should generate a valid text output', () => {
+    const text = checkAndGenerate('Laureline', 26);
+    expect(text).toBe('Laureline (26 years old)');
+
 })

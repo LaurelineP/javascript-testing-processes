@@ -41,3 +41,10 @@ Example: You'd like to test your code at each changement, stages for instance.
 #### Headless Browser: ( E2E test )
 - Simulates the user experience w/ browser interactions
 - Tools: Puppeteer
+
+## Unit testing
+Unit testing are good to check functions with no dependencies ( meaning a mere function doing one thing )  
+ex: with arguments should return a txt with those arguments ( cf. "generateText")
+
+## Integration testing
+Integration testing are good to check functions implementing other functions ex: a function using other smaller function, which also have there unit tests :-> which leads us to have a bigger & safer-like function ( due to the use of other functions already tested ) ( cf. "addUser" using our previous "generateText" function in order to check the validation --> "checkAndGenerate" function ).
